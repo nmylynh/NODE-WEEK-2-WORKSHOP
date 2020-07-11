@@ -17,7 +17,7 @@ promotionRouter.route('/')
             .catch(err => next(err)); //next(err) is passing off the error to the overall error handler so express can handle it.
     })
     .post((req, res, next) => {
-        promotionRouter.create(req.body) //Mongoose will let us know if we're missing any data in the request body
+        Promotion.create(req.body) //Mongoose will let us know if we're missing any data in the request body
             .then(promotion => {
                 console.log('Promotion Created ', promotion); //Second argument; promotion: will log info about the promotion to the console.
                 res.statusCode = 200;
