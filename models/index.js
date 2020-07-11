@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Campsite = require('./models/campsite');
+const Partner = require('./partner');
 
 const url = 'mongodb://localhost:27017/nucampsite';
 const connect = mongoose.connect(url, {
@@ -44,4 +45,12 @@ connect.then(() => {
         console.log(err);
         mongoose.connection.close();
     });
+
+    Partner.create({
+        name: 'Mongo Fly Shop',
+        image: 'images/mongo-logo.png',
+        featured: false,
+        description: 'Need a new fishing pole, a tacklebox, or files of all kinds? Stop by Mongo Fly Shop.'
+    })
 });
+
