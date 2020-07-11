@@ -26,7 +26,7 @@ const partnerSchema = new Schema({
 });
 
 //Creating Model: 
-//First argument: Capitalized and singular version of the collection you want to use for this model; Campsite for campsites collection
+//First argument: Capitalized and singular version of the collection you want to use for this model; Partner for partners collection
 //Second argument: Schema we want to use for this collection) 
 //Returns a constructor function (A de-sugared class)
 //Used to instantiate documents for mondoDB
